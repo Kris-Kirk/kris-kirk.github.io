@@ -5,6 +5,7 @@ The Following Code Sets Up The Standard Layout for the Webpage.
     body {
         margin-left: 100px;
         margin-right: 100px;
+        font-family: Arial, Helvetica, sans-serif;
     }
     p {
         text-indent: 20px;
@@ -31,12 +32,13 @@ The Following Code is the content of the webpage.
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kris's website</title>
-        <link rel="stylesheet" href="projectstyle.css"
+        <link rel="stylesheet" href="projectstyle.css">
+        <link rel="navigationBar" href="navbar.css">
       </head>
 
 <body>
   
-    <nav>
+    <div class="topnav">
       <a href="./index.html">Home</a>
       <a href="./projects.html">Projects</a>
       <a href="./sports.html">Sports</a>
@@ -53,24 +55,20 @@ Welcome to my projects folder. Here you can see a showcase of the things that I 
         <li>Tapped holes manually</li>
         <li style="max-width: 1000px;">I regularly use CAD and collaborate with others to develop optimal solutions for fuel efficiency. This includes running topology optimization studies for weight reduction, while maximizing strength.</li>
     </ul>
-    <figure>
         <img src="SuperMileageBasePlate.png" style="max-height: 200px;">
         <img src="SuperMileageMotorMount.png" style="max-height: 200px;">
         <figcaption><i>Solidworks models of base plate and gearbox mount.</i></figcaption>
         <br> <img src="SuperMileageBasePlateTapping.png" style="max-height: 200px;">
         <figcaption><i>Tapping the threaded holes of the baseplate.</i></figcaption>
-      </figure>
 
 <h3>3D Printing</h3>
 <p>I designed and 3D printed wall-mounted bike holders to help with bike organization, and a series of 3D printed holders for a spice rack organization cabinet. I have also designed boxes and recently printed a cell-phone mount for my bike. Through the process of learning to use 3D printers, I learned to use SOLIDWORKS to design parts, Cura to convert the SOLIDWORKS files to a 3D printable file, and Octopi, which is a program that allows me to wirelessly connect my computer to my printer using a Raspberry Pi microprocessor.
 </p>
-<figure>
     <img src="PopsicleStickBikeMount.png" style="max-height: 200px;">
     <img src="BikeMounts.png" style="max-height:200px">
     <figcaption><i>Custom-made wall-mounted bike holders</i></figcaption>
     <br> <img src="SpiceRack.png" style="max-height: 200px">
     <figcaption><i>Custom-made spice rack holders for a wall-mounted spice cabinet</i></figcaption>
-  </figure>
 <h3>UBC Physics Olympics</h3>
     <ul> 
         <li> Designed and conducted experiments to verify gravitational acceleration using the available sensors on a cell phone</li>
@@ -107,12 +105,10 @@ Welcome to my projects folder. Here you can see a showcase of the things that I 
 <h3 style="margin-top: 75px;">Student Spaceflight Experiment Program (SSEP)</h3> 
     <p>In September of 2015 the Student Spaceflight Experiments Program (SSEP), an international program run by the US National Center for Earth and Space Science Education (NCESSE), provided my school district with the opportunity to nominate one student group to create an experiment to be conducted on the International Space Station. To accomplish my goal of designing the winning proposal, I designated roles and responsibilities within my group based on each member's individual preferences and skill set and through this process learned how to effectively appoint roles that play to each individual’s strengths. I developed short-term goals to be completed each week and supported my group members when they were unable to complete their tasks. In addition to the organizational skills I developed while scheduling personal and team due dates, I learned the importance of being reasonable, flexible and supportive. I kept my group members, one of whom was autistic, motivated and focused, by frequently validating their contributions and emphasizing the possibility of our experiment being selected. While creating our proposal and experiment, I learned to contact and interview local experts, review scientific literature, write and revise a professional scientific proposal, and create and conduct an experiment.</p>
     <p>My group investigated the possibility of growing composting red-worms in space and this required testing various variables including soil saturation and food supply. After our team won our school and district competitions, the NCESSE committee selected our proposal. We raised funds to travel to the conference in June of 2016 in Washington, DC by securing corporate sponsorship and organizing Freezie sales at school events. Representing Canada, my group presented our proposal to conference attendees and the general public orally through a slideshow and poster presentation at the Smithsonian Air and Space Museum. I learned how professional conferences are run, and how to present in a formal manner. Our experiment was launched into space aboard the SpaceX Falcon 9 rocket in February of 2017 and upon its return I learned how to analyze the results and publish our findings in a formal report. This experience taught me that optimism and hard work can lead to amazing learning opportunities. </p>
-<figure>
     <img src="SSEPArticle.png" alt="missing" style="max-height: 600px;">
     <div class="caption">
         <p>Article Published by the North Shore News celebrating the project.</p>
     </div>
-</figure>
 
 <h3>Bike/Ski/Snowboard Rack</h3> 
     <p>I used aluminum extruded square tubes to create a custom ski/snowboard rack for my family's Smart car, which I fasten in the car's towing hook ports. This project required an initial design phase where I planned and drew (by hand) a possible rack configuration, and after consulting my dad, I purchased the aluminum extrusions and used wood/metal tools that I own to build the rack according to my plan. Recently I modified the rack by moving the horizontal pieces (the part the skis fit on to) to turn the rack into a bicycle rack as well. Previously we had to jam all of our ski equipment into the tiny Smart car, however we are now able to drive with the skis secured on the back.
