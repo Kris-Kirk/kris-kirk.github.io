@@ -1,0 +1,29 @@
+.side-by-side-images{
+max-height: 200px;
+    display: flex;
+}
+
+.side-by-side-images img{
+    height: 200px;
+    margin-right: 20px;
+}
+.side-by-side-images .images{
+    position: relative;
+}
+.side-by-side-images .image3{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.side-by-side-images .image4{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.side-by-side-images .description{
+    position: relative;
+    margin-left: -20px;
+}
+.caption{
+    font-style: italic;
+}
