@@ -1,54 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-The Following Code Sets Up The Standard Layout for the Webpage.
--->
-<style>
-    body {
-        margin-left: 100px;
-    }
-    p {
-        text-indent: 20px;
-        max-width: 1000px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    h1{
-        color: darkblue;
-    }
-    h3{
-        color: rgb(0, 132, 255);
-    }
-    nav{
-        background-color: lightblue;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-</style>
-<!--
-    The Following Code is the content of the webpage.
--->
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kris's website</title>
-        <link rel="stylesheet" href="projectstyle.css">
-        <link rel="navigationBar" href="navbar.css">
-      </head>
-      <body>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./projects.html">Projects</a>
-            <a href="./sports.html">Sports</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kristopher Kirkwood</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Kristopher Kirkwood</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="drone.html">Drone</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
         </nav>
-        
-      </body>
-
-      <img src="TunnelBluffs.jpg" alt="Profile Picture of Kris Kirkwood" style="width: 400px">
-      <img src="Hollyburn.jpg" alt="Profile Picture of Kris Kirkwood on a mountain" style="width: 400px">
-
-  <p>Hi, my name is Kris and I am an eager learner who enjoys finding creative solutions to challenging problems. As a creative thinker who can learn and apply knowledge quickly, I have chosen to pursue Engineering Physics at UBC. Within the Engineering Physics program, I focus on developing a strong foundation of advanced math and physics, while taking courses on Mechanical, Electrical, and Software Engineering, in order to become a well-rounded individual with a background in a variety of disciplines.
-
-    When I am not at pursuing Engineering, I enjoy coaching swimming and diving. I am the Head Coach and the Assistant Head Coach of the Diving and Swimming programs for the North Vancouver Cruisers Aquatics Club.</p>
-
+    </header>
+    <div class ="content">
+        <h1>About Me</h1>
+        <!-- Your website content goes here -->
+        <img src="Kris Kirkwood_DVV-02220.jpg" alt="Formal Profile Picture of Kris Kirkwood" style="width: 25%;">
+        <img src="TunnelBluffs.jpg" alt="Profile Picture of Kris Kirkwood" style="width: 25%;">
+        <img src="Hollyburn.jpg" alt="Profile Picture of Kris Kirkwood on a mountain" style="width: 25%;">
+         <p>Hi, my name is Kris and I am an eager learner who enjoys finding creative solutions to challenging problems. As a creative thinker who can learn and apply knowledge quickly, I have chosen to pursue Engineering Physics at UBC. Within the Engineering Physics program, I focus on developing a strong foundation of advanced math and physics, while taking courses on Mechanical, Electrical, and Software Engineering, in order to become a well-rounded individual with a background in a variety of disciplines.
+            When I am not at pursuing Engineering, I enjoy coaching swimming and diving. I am the Head Coach and the Assistant Head Coach of the Diving and Swimming programs for the North Vancouver Cruisers Aquatics Club.</p>
+        </div>
+</body>
 </html>

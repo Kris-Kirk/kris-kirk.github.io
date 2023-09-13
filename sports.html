@@ -1,54 +1,31 @@
-<!--
-The Following Code Sets Up The Standard Layout for the Webpage.
--->
-<style>
-    body {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    head {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    p {
-        text-indent: 20px;
-        max-width: 1000px;
-    }
-    h1{
-        color: darkblue;
-    }
-    h3{
-        color: rgb(0, 132, 255);
-    }
-    nav{
-        background-color: lightblue;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-</style>
-
-<!--
-The Following Code is the content of the webpage.
--->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kris's website</title>
-        <link rel="stylesheet" href="projectstyle.css">
-        <link rel="navigationBar" href="navbar.css">
-      </head>
-      <body>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./projects.html">Projects</a>
-            <a href="./sports.html">Sports</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kristopher Kirkwood</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Kristopher Kirkwood</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="drone.html">Drone</a></li>
+                <li><a href="sports.html">Sports</a></li>
+            </ul>
         </nav>
-
+    </header>
+    <!-- Your website content goes here -->
+    <div class ="content">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Hb7LS1sLB0A?clip=Ugkx8XfjFhzyjwS6RCMhswo4vmWH_aj7Wd3z&amp;clipt=EJyQ-QUY_OT8BQ"
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
         web-share" allowfullscreen></iframe>
         <figcaption>In 2022 I swam at the BCSSA Provincial Championships and came home with a gold medal in the Division 7 Boys 50m freestyle with a time of 24.21</figcaption>
-      </body>
+    </div>
+    </body>
 </html>
