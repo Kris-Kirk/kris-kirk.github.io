@@ -55,70 +55,71 @@ header {
 }
 
 .content {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ensure the container takes up at least the viewport height 
-    text-align: center; Optionally center-align the content within the container */
-
-    max-width: 960px;
-    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20vw;
+    padding-right: 20vw;
 } 
-.content p {
+p {
     font-size: 15px;
-    max-width: 1000px;
 }
-.content h1{
+h1{
     color: darkblue;
     text-align: center;
 }
-.content h3{
+h3{
     font-size: 24px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: rgb(0, 132, 255);
 }
-.content .side-by-side-images{
-max-height: 200px;
+.side-by-side-images{
     display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-between; /* Distribute images evenly */
 }
 
-.content .side-by-side-images img{
+.image {
+    flex: 0 0 calc(50% - 5px); /* Each image takes up 50% of the container width with 10px spacing */
+    margin-bottom: 10px; /* Add spacing between images when stacked vertically */
+}
+
+.image img{
+    max-width: 25vw;
+}
+
+/* .side-by-side-images img{
     height: 200px;
     margin-right: 20px;
 }
-.content .side-by-side-images .images{
+.side-by-side-images .images{
     position: relative;
 }
-.content .side-by-side-images .image3{
+.side-by-side-images .image3{
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
 }
-.content .side-by-side-images .image4{
+.side-by-side-images .image4{
     margin-top: 50px;
     margin-bottom: 50px;
-}
+} */
 
-.content .side-by-side-images .description{
-    position: relative;
-    margin-left: -20px;
+
+.description{
+    text-align: center;
+    margin-top: 10px; /* Add spacing between image and caption */
+    flex-basis: 100%; /* Ensure captions take full width of the container */
 }
-.content .caption{
+.caption{
     font-style: italic;
 }
 
-.content ul {
+ul {
     list-style: disc; /* Use bullets as list markers */
-    /* margin-left: 20px; Adjust the indentation as needed */
     padding-left: 30px; /* Optional: Add padding to the left of the list items */
 }
 
 /* Apply styles to list items (li) */
-.content li {
-    /* font-size: 16px;
-    line-height: 1.5;
-    color: #666; */
+li {
     margin-bottom: 5px; /* Optional: Adjust the margin between list items*/
 }
