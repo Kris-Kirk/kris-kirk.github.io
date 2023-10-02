@@ -101,6 +101,7 @@ li {
 
 .container {
     margin: 0 auto;
+    margin-bottom: 20px;
     padding-left: 20vw;
     padding-right: 20vw;
 }
@@ -125,4 +126,11 @@ li {
 
 .section {
     margin-bottom: 20px;
+}
+
+About
+{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 40px;
 }
