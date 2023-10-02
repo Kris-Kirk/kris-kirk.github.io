@@ -61,7 +61,7 @@ header {
 } 
 p {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 h1{
     color: darkblue;
@@ -95,7 +95,8 @@ ul {
 
 /* Apply styles to list items (li) */
 li {
-    margin-bottom: 5px; /* Optional: Adjust the margin between list items*/
+    margin-top: 2px; /* Optional: Adjust the margin between list items*/
+    margin-bottom: 2px; /* Optional: Adjust the margin between list items*/
 }
 
 .container {
