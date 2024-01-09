@@ -27,6 +27,30 @@
         <h1>Projects</h1>
         <p>Welcome to my projects folder. Here you can see a showcase of the things that I have worked on.</p>
 
+        <h3>UBC Engineering Physics Machine Learning and Neural Networks</h3>
+            <ul> 
+                <li>Used computer vision (CV) and neural networks to extract data from a simulation and control a virtual robot in the simulation. Implemented CV algorithms to track objects and identify words and letters. Use a neural network to process the data and determine controls for the robot.</li>
+            </ul>
+                <br>
+                <img src="Road Crossing Machine Learning.png" style="max-width:100%; max-height:auto;">
+                <figcaption>
+                    <ul>
+                        <li>To detect when the simulated pedestrian crossed the road, I followed the following steps:</li>
+                        <br>
+                    </ul>
+                    <ol>
+                        <li>Use HSV thresholding on each image from the simulation to determine the number of red pixels in the frame.</li>
+                        <li>Stop moving once the number of red pixels exceeded a threshold value.</li>
+                        <li>Save images of the pedestrian every 10 frames.</li>
+                        <li>Grayscale each image.</li>
+                        <li>Subtract the two frames from each other and create a binary image based on a threshold.</li>
+                        <li>Measure the number of white pixels.</li>
+                        <li>Return that the pedestrian has been detected once the white pixels exceed a threshold.</li>
+                    </ol>
+                </figcaption>
+                <br> <img src="Road Finding Machine Learning.png" style="max-width:100%; max-height:auto;">
+                <figcaption>Figure 6 shows the original image that was taken from the camera feed on the robot. Because the line was always in the bottom section of the screen, I chose to crop the original image and then get a grayscale version of this cropped image. Next, I determined the average intensity of the pixels in the grayscale image so that I could create a threshold for finding the white line that was dependent on each frame, as sometimes the lighting and pixel intensity of the line changed on the track. Finally, I cropped the image to a region in the bottom section of the screen and used contour detection to find the largest white section of the road, and from that point determined the centroid of that shape and labelled it as the location of the line in the frame. I then used PID to position the robot relative to the location of the line. This allowed the robot to move and navigate the track.</figcaption>
+
         <h3>UBC Engineering Physics Robot Summer</h3>
             <ul> 
                 <li>Worked in a team of four to design and build a fully autonomous robot which accurately follows a tape track while picking up blocks and avoiding blocks that contain magnets at a high speed.</li>
@@ -34,6 +58,7 @@
                 <li>Built both the electrical and mechanical components of the block collection and rejection system to pick up blocks while driving at full speed. The collection of the “good blocks” was achieved using a gearing system to connect a DC motor to a custom-made brush which would lift the blocks from the competition surface onto the storage platform of the robot. I designed housings for four Hall effect sensors (red parts in the image below) which would detect when a magnetic “Bomb” would pass under the cars, triggering a response of closing a pair of doors and stopping the pick-up mechanism to avoid picking up the bomb.</li>
                 <li>Operated lathes, waterjet and laser cutters, and 3D printers to build custom components for quick integration between mechanical and electrical systems.</li>
                 <li>I regularly use CAD and collaborate with others to develop optimal solutions for fuel efficiency. This includes running topology optimization studies for weight reduction, while maximizing strength.</li>
+                <li>My team scored the most points in the whole tournament, however we finished 4th overall after a collision in the semi-final broke our steering servo motor.</li>
             </ul>
                 <video width="720" height="405" controls>
                 <source src="Robot Summer Photos/Robot Racing.mp4" type="video/mp4">
@@ -54,7 +79,7 @@
 
         <h3>UBC Supermileage</h3>
             <ul> 
-                <li> Member of the powertrain division on the UBC Supermileage team</li>
+                <li>Member of the powertrain division on the UBC Supermileage team</li>
                 <li>Designed and manufactured a motor mount and the universal base plate mount for the team’s electric vehicle</li>
                 <li>Used solidworks to design the mounts and generate an assembly of the powertrain </li>
                 <li>Manufactured parts using a waterjet cutter</li>
