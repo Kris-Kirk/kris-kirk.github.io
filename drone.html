@@ -3,52 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Kristopher Kirkwood</title>
+    <title>Kristopher Kirkwood - Drone Photography</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Lightbox Overlay */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 17, 33, 0.95); /* Matches your --bg-color with opacity */
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        /* The Expanded Image */
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        /* Instructions Text */
+        #lightbox-caption {
+            position: absolute;
+            bottom: 2rem;
+            color: var(--text-muted);
+            font-family: var(--font-main);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="https://www.linkedin.com/in/kristopherkirkwood/" target = "_blank">Kristopher Kirkwood</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="drone.html">Drone</a></li>
-                <li><a href="sports.html">Sports</a></li>
-            </ul>
-        </nav>
-    </header>
-        <!-- Your website content goes here -->
-        <div class ="content">
-          <h1> Drone Photos</h1>
-          <h3>Here are some photos that I took with my drone.</h3>
-        
-        <h3 style="color: orangered; font-size: 30px; font-family: Arial, Helvetica, sans-serif;">Nature</h3>
-        <img class="drone">
-            <img src="Drone Photos/DJI_0040.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0071.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0031.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0094.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0127.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0576.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0587.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0805.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0889.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0969.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0973.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_0990.JPG" alt="Trulli" style="width:90%">
-            <img src="Drone Photos/DJI_1003.JPG" alt="Trulli" style="width:90%">
 
-        <h3 style="color: orangered; font-size: 30px; font-family: Arial, Helvetica, sans-serif;">Colombia</h3>
-        <img src="Drone Photos/Colombia/DJI_0225.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0260.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0261.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0293.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0316.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0323.JPG" alt="Trulli" style="width:90%">
-        <img src="Drone Photos/Colombia/DJI_0475.JPG" alt="Trulli" style="width:90%">
-      </div>
+    <nav>
+        <a href="index.html" class="logo">Kris<span>.</span></a>
+        <div class="nav-links">
+            <a href="index.html">Profile</a>
+            <a href="projects.html">Technical Projects</a>
+            <a href="personal.html">Personal Projects</a>
+            <a href="https://www.linkedin.com/in/kristopherkirkwood/" target="_blank">LinkedIn</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <h1>Drone Photography</h1>
+        <p>A collection of aerial shots taken with my drone.</p>
+
+        <br>
+        <h2>Nature</h2>
+        <div class="project-gallery">
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0040.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0071.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0031.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0094.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0127.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0576.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0587.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0805.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0889.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0969.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0973.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_0990.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/DJI_1003.JPG" alt="Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+        <br><br>
+        <h2>Colombia</h2>
+        <div class="project-gallery">
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0225.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0260.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0261.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0293.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0316.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0323.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="Drone Photos/Colombia/DJI_0475.JPG" alt="Colombia Drone Photo" class="gallery-media" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kristopher Kirkwood. Built with code.</p>
+    </footer>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+        <div id="lightbox-caption">Click anywhere to close</div>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Set source
+            lightboxImg.src = element.src;
+            
+            // Show lightbox using Flexbox to center
+            lightbox.style.display = 'flex';
+            
+            // Disable scrolling on background
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            // Re-enable scrolling
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>

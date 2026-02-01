@@ -1,0 +1,321 @@
+/* style.css */
+:root {
+    --bg-color: #0b1121;      /* Deep Navy */
+    --card-bg: #151e32;       /* Card Navy */
+    --text-main: #e2e8f0;     /* White/Grey */
+    --text-muted: #94a3b8;    /* Muted Grey */
+    --accent: #38bdf8;        /* Electric Blue */
+    --accent-hover: #0ea5e9;
+    --font-main: 'Inter', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: large;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 10%; background-color: rgba(11, 17, 33, 0.95);
+    position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1e293b;
+}
+.logo { font-weight: 800; font-size: 1.5rem; color: var(--text-main); text-decoration: none; }
+.logo span { color: var(--accent); }
+.nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 2rem; font-weight: 500; transition: 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+/* --- LAYOUT UTILS --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 4rem 20px; width: 100%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+
+/* --- TYPOGRAPHY --- */
+h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.1; }
+h2 { font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 1rem; }
+h3 { color: var(--text-main); margin-bottom: 0.5rem; font-size: 1.4rem; }
+p { color: var(--text-muted); margin-bottom: 1rem; }
+
+/* --- PROFILE PHOTO --- */
+.hero-wrapper { display: flex; align-items: center; gap: 4rem; justify-content: space-between; }
+.profile-img {
+    width: 280px;            /* You can adjust width here */
+    height: 370px;           /* Adjust height to make it a portrait rectangle */
+    border-radius: 12px;     /* Matches the rounded corners of your cards */
+    object-fit: cover;       /* Ensures the photo fills the shape without stretching */
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    flex-shrink: 0;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block; padding: 10px 24px; border: 2px solid var(--accent);
+    color: var(--accent); text-decoration: none; border-radius: 5px; font-weight: 600; transition: 0.3s; margin-top: 1rem;
+}
+.btn:hover { background-color: rgba(56, 189, 248, 0.1); }
+.btn-fill { background-color: var(--accent); color: var(--bg-color); }
+.btn-fill:hover { background-color: var(--accent-hover); }
+
+/* --- CARDS --- */
+.card {
+    /* Existing styles... */
+    position: relative; /* CRITICAL: This keeps the logo inside the card */
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.card-image { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; background: #0f172a; }
+.date { font-family: monospace; color: var(--accent); font-size: 1.0rem; margin-bottom: 0.5rem; display: block; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem;}
+.tag { font-size: 1.0rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 20px; font-family: monospace; }
+
+/* --- NEW HERO LAYOUT (style.css) --- */
+
+/* The container that holds Title (Left) and Image (Right) */
+.hero-split {
+    display: flex;
+    justify-content: space-between; /* Pushes them apart */
+    align-items: flex-start;        /* Aligns them at the top */
+    gap: 3rem;                      /* Space between text and image */
+    margin-bottom: 3rem;
+}
+
+/* The Left Side (Text) */
+.hero-text {
+    flex: 1; /* Takes up all available space */
+}
+
+/* The Right Side (Image) - 5:4 Aspect Ratio */
+.project-hero-img {
+    width: 400px;            /* Fixed width for desktop */
+    height: 320px;           /* 320 is 4/5 of 400 (5:4 Ratio) */
+    object-fit: cover;       /* Ensures photo fills the box without stretching */
+    border-radius: 12px;     /* Rounded corners */
+    border: 1px solid #1e293b;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Optional: Nice shadow depth */
+    flex-shrink: 0;          /* Prevents image from getting squished */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .hero-split {
+        flex-direction: column-reverse; /* Puts image on top, text on bottom */
+        gap: 2rem;
+    }
+    .project-hero-img {
+        width: 100%;       /* Full width on phone */
+        height: auto;
+        aspect-ratio: 4/3; /* Maintains 4:3 ratio automatically */
+    }
+}
+
+/* --- FOOTER --- */
+footer { margin-top: auto; padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid #1e293b; }
+
+@media (max-width: 768px) {
+    .hero-wrapper { flex-direction: column-reverse; text-align: center; }
+    .profile-img { width: 200px; height: 200px; margin-bottom: 2rem; }
+    .grid { grid-template-columns: 1fr; }
+    nav { padding: 1.5rem 5%; }
+}
+
+/* This targets cards that are also links */
+a.card {
+    text-decoration: none; /* Removes the underline from text */
+    color: inherit;        /* Forces text to stay white/grey, not blue */
+    display: flex;         /* Keeps the layout rigid */
+    height: 100%;          /* Ensures cards in the same row are equal height */
+    cursor: pointer;       /* Shows the 'hand' icon when hovering */
+}
+
+/* Optional: Make the arrow/text pop when you hover over the whole card */
+a.card:hover h3 {
+    color: var(--accent);
+    transition: color 0.2s;
+}
+
+.card-logo {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 2rem;           /* Aligns with your card padding */
+    right: 2rem;         /* Aligns with your card padding */
+    width: 90px;         /* Size of the logo */
+    height: 90px;
+    object-fit: contain; /* Ensures the logo doesn't get squished */
+    opacity: 0.9;        /* Slight transparency looks premium */
+    background: transparent;
+}
+
+.card-logo-title {
+    display: block;
+    height: 60px;            /* Large enough to be readable, small enough to fit */
+    width: auto;             /* Maintains aspect ratio */
+    max-width: 100%;          /* Prevents it from hitting the edges */
+    margin-bottom: 1.5rem;   /* Space between logo and the date/role */
+    object-fit: contain;
+    
+    /* Make them white to pop against the navy background */
+    /* filter: brightness(0) invert(1);  */
+    opacity: 0.9;
+}
+
+/* Optional: Make logos white if you download black .pngs */
+.card-logo-white {
+    filter: brightness(0) invert(1); 
+}
+
+/* Header Layout for Experience Pages */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* The Circular Role Photo */
+.role-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    flex-shrink: 0; /* Prevents squishing on small screens */
+}
+
+html {
+    scroll-behavior: smooth; /* This makes the jump feel premium */
+}
+
+/* The 'Deep Dive' Module Container */
+.project-module {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 4rem; /* Spacing between projects */
+    scroll-margin-top: 100px; /* Ensures the header doesn't cover the title when you jump */
+}
+
+.module-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2rem;
+}
+
+/* Mobile fix for the modules */
+@media (max-width: 768px) {
+    .module-header { flex-direction: column-reverse; }
+    .project-module { padding: 1.5rem; }
+}
+
+/* --- NEW MODULE LAYOUT (Reduces Empty Space) --- */
+
+.module-flex-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+.module-text {
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.module-media {
+    flex: 1; /* Takes up 1/3 of the space */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between photo and tech stack */
+}
+
+/* Update photo styles so it fills its column */
+.module-media .project-hero-img {
+    width: 100%; /* Makes it fill the container width */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0;
+    aspect-ratio: 4/3;
+    /* To change size, you just change the flex ratio above! */
+}
+
+/* Remove card styling from the sidebar for a cleaner look */
+.module-media .tech-sidebar {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 900px) {
+    .module-flex-container {
+        flex-direction: column;
+    }
+    .module-media {
+        width: 100%;
+        flex-direction: row; /* Put photo and tech stack side-by-side on tablet */
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .module-media {
+        flex-direction: column; /* Stack them back up on phone */
+    }
+}
+
+/* --- PROJECT MEDIA GALLERY --- */
+.project-gallery {
+    display: grid;
+    /* This magically fits as many 250px images as possible per row */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gallery-media {
+    width: 100%;
+    height: 180px; /* Fixed height forces alignment */
+    object-fit: contain; /* Crops image neatly to fill the box */
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #000;
+    transition: transform 0.2s ease;
+}
+
+/* Optional: Make them pop when you hover */
+.gallery-media:hover {
+    transform: scale(1.03);
+    border-color: var(--accent);
+}
+
+.gallery-caption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+}
