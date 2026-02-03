@@ -382,8 +382,7 @@ footer {
     
     .profile-img { 
         width: 200px; 
-        height: 200px; 
-        margin-bottom: 2rem; 
+        height: auto; 
     }
     
     .grid { grid-template-columns: 1fr; }
@@ -394,96 +393,130 @@ footer {
     }
 }
 
-/* --- SKILLS SECTION --- */
+/* --- SKILLS SECTION (Compact Version) --- */
 .skills-wrapper {
     margin-top: 2rem;
 }
 
 .skill-category-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;      /* Slightly smaller title */
     color: var(--text-muted);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .skills-grid {
     display: grid;
-    /* Automatically fits as many 120px cards as possible */
-    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
-    gap: 1.5rem;
+    /* Reduced min-width from 110px to 100px for tighter packing */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;              /* Reduced gap from 1.5rem */
 }
 
 .skill-card {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;   /* Reduced padding significantly */
     text-align: center;
     transition: all 0.3s ease;
     cursor: default;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;            /* Reduced gap between icon and text */
 }
 
-/* Icon Styling */
+/* 1. Font Icons (Devicon / FontAwesome / Uicons) */
 .skill-card i {
-    /* 1. Force a standard size box for EVERY icon */
-    width: 3rem;
-    height: 3rem;
-    font-size: 3rem;
+    width: 2.5rem;          /* Reduced from 3rem */
+    height: 2.5rem;         /* Reduced from 3rem */
+    font-size: 2.5rem;      /* Reduced from 3rem */
     
-    /* 2. Flexbox Centering (The magic fix) */
-    /* This forces the icon glyph to sit exactly in the middle of the box */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* 3. Reset line-height to prevent vertical drift */
     line-height: 1;
     
     color: var(--text-muted);
     transition: all 0.3s ease;
 }
 
-.skill-card span {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-main);
-    /* white-space: nowrap; */
+/* 2. Image Icons (The PNG Shadow Hack) */
+.icon-box {
+    width: 2.5rem;          /* Matches the new font size */
+    height: 2.5rem;
+    margin-bottom: 0;       /* Removed extra margin since flex-gap handles it */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Hover Effects: The "Glow" */
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-100%);
+    /* Shadow displacement matches the new width */
+    filter: drop-shadow(2.5rem 0 0 var(--text-muted));
+    transition: filter 0.3s ease;
+}
+
+/* Text Styling - Matches Main Body Font */
+.skill-card span {
+    /* 1. Force the standard website font */
+    font-family: monospace; 
+    
+    /* 2. Make it 'Normal' weight (not bold) to match your descriptions */
+    font-weight: 400;       
+    
+    /* 3. Keep the Blue color you asked for */
+    color: var(--accent);    
+    
+    /* 4. Formatting */
+    font-size: 0.85rem;      
+    line-height: 1.2;
+    margin-top: 0.2rem;
+}
+
+/* Hover Effects */
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Subtle lift */
     border-color: var(--accent);
-    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.15);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
 }
 
 .skill-card:hover i {
-    color: var(--accent); /* Icon turns Electric Blue */
+    color: var(--accent);
 }
 
-/* Mobile Tweak: Smaller icons on phones */
+.skill-card:hover .icon-box img {
+    filter: drop-shadow(2.5rem 0 0 var(--accent));
+}
+
+/* Mobile Tweak */
 @media (max-width: 600px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.8rem;
     }
-    .skill-card i { font-size: 2.2rem; }
+    .skill-card i, .icon-box { 
+        width: 2rem; 
+        height: 2rem; 
+        font-size: 2rem; 
+    }
 }
 
 /* --- PNG ICON COLOR SYSTEM (Fixed Alignment) --- */
 
 .icon-box {
     /* 1. Exact dimensions to match your FontAwesome icons */
-    width: 3rem;           
-    height: 3rem;
+    width: 2.5rem;           
+    height: 2.5rem;
     
     /* 2. REMOVED margin-bottom so it matches the Flex gap of the others */
     /* margin-bottom: 1rem;  <-- DELETED THIS */
@@ -500,13 +533,13 @@ footer {
 .icon-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transform: translateX(-100%);
-    filter: drop-shadow(3rem 0 0 var(--text-muted));
+    filter: drop-shadow(2.5rem 0 0 var(--text-muted));
     transition: filter 0.3s ease;
 }
 
 /* The Hover Effect (Unchanged) */
 .skill-card:hover .icon-box img {
-    filter: drop-shadow(3rem 0 0 var(--accent));
+    filter: drop-shadow(2.5rem 0 0 var(--accent));
 }
