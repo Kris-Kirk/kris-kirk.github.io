@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Projects Details | Kris Kirkwood</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,63 +11,181 @@
     <nav>
         <a href="index.html" class="logo">Kris<span>.</span></a>
         <div class="nav-links">
-            <a href="index.html" class="active">Profile</a>
+            <a href="index.html">Profile</a>
             <a href="projects.html">Technical Projects</a>
-            <a href="personal.html">Personal Projects</a>
+            <a href="personal.html" class="active">Personal Projects</a>
             <a href="https://www.linkedin.com/in/kristopherkirkwood/" target="_blank">LinkedIn</a>
         </div>
     </nav>
 
     <div class="container">
         <a href="personal.html" class="btn" style="margin-bottom: 2rem;">&larr; Back to Personal Projects Menu</a>
+        <h1 style="font-size: 2rem; margin-bottom: 3rem;">Personal Deep Dives</h1>
 
         <div id="paddleboard" class="project-module">
-            <div class="hero-split">
-                <div class="hero-text">
-                    <h2>Cedar Strip Paddleboard</h2>
+            
+            <div class="module-flex-container">
+                <div class="module-text">
+                    <h1 style="margin-bottom: 0.5rem;">Cedar Strip Paddleboard</h1>
+                    <p class="role" style="color: var(--accent); margin-bottom: 2rem;">Woodworking</p>
+
+                    <h3>Overview</h3>
                     <p>
-                        I built this from scratch using a stitch-and-glue technique. I used plywood for the internal ribs and cut 
-                        Western Red Cedar strips for the deck, using two colors to generate a custom pattern.
+                        I hand-built a hollow wooden stand-up paddleboard from scratch using a stitch-and-glue technique for the internal skeleton 
+                        and bead-and-cove cedar strips for the hull. The deck features a custom pattern created by alternating Western Red Cedar tones.
                     </p>
+                    
+                    <h3>Fabrication Process</h3>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem;">
+                        <li><strong>Frame:</strong> Cut marine plywood ribs and aligned them on a strongback for stability.</li>
+                        <li><strong>Hull:</strong> Milled thousands of linear feet of cedar strips and glued them individually.</li>
+                        <li><strong>Finishing:</strong> Applied layers of fiberglass cloth and epoxy resin, followed by marine spar varnish for UV protection.</li>
+                    </ul>
                 </div>
-                <img src="images/Project Photos/Paddleboard/PaddleBoardOnWater.png" alt="Paddleboard" class="project-hero-img">
+
+                <div class="module-media">
+                    <img src="images/Project Photos/Paddleboard/PaddleBoardOnWater.png" alt="Paddleboard on Water" class="project-hero-img">
+                    
+                    <div class="tech-sidebar">
+                        <h3>Skills</h3>
+                        <div class="tags">
+                            <span class="tag">Woodworking</span>
+                            <span class="tag">Composites</span>
+                            <span class="tag">Epoxy Resin</span>
+                            <span class="tag">Joinery</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>
-                After extensive sanding, I fiberglassed the board using epoxy and cloth. This project taught me how to use planers, jointers, 
-                and how to thicken epoxy using glass bubbles.
-            </p>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="images/Project Photos/Paddleboard/FinishedPB.png" alt="Finished Board" class="gallery-media">
+                    <span class="gallery-caption">Completed Build</span>
+                </div>
+                 </div>
+        </div>
+
+        <div id="3dprinting" class="project-module">
+            
+            <div class="module-flex-container">
+                <div class="module-text">
+                    <h1 style="margin-bottom: 0.5rem;">3D Printed Designs</h1>
+                    <p class="role" style="color: var(--accent); margin-bottom: 2rem;">CAD & Rapid Prototyping</p>
+
+                    <h3>Overview</h3>
+                    <p>
+                        I utilize FDM 3D printing to design and fabricate custom solutions for household organization and mechanical repairs. 
+                        This involves iterative design in CAD followed by slicing optimization for strength and print quality.
+                    </p>
+                    
+                    <h3>Projects</h3>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem;">
+                        <li><strong>Organization:</strong> Modular spice racks and custom wall mounts.</li>
+                        <li><strong>Repair:</strong> Replacement brackets and functional mechanical parts.</li>
+                    </ul>
+                </div>
+
+                <div class="module-media">
+                    <img src="images/Project Photos/3DPrinting/SpiceRack.png" alt="3D Printed Spice Rack" class="project-hero-img">
+                    
+                    <div class="tech-sidebar">
+                        <h3>Tools</h3>
+                        <div class="tags">
+                            <span class="tag">Fusion 360</span>
+                            <span class="tag">PrusaSlicer</span>
+                            <span class="tag">FDM Printing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="images/Project Photos/3DPrinting/BikeMounts.png" alt="Bike Mounts" class="gallery-media">
+                    <span class="gallery-caption">Custom Wall Mounts</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Project Photos/3DPrinting/PopsicleStickBikeMount.png" alt="Prototyping" class="gallery-media">
+                    <span class="gallery-caption">Rapid Prototyping</span>
+                </div>
+            </div>
         </div>
 
         <div id="space" class="project-module">
-            <div class="hero-split">
-                <div class="hero-text">
-                    <h2>Student Spaceflight Experiment (SSEP)</h2>
+            
+            <div class="module-flex-container">
+                <div class="module-text">
+                    <h1 style="margin-bottom: 0.5rem;">ISS Experiment (SSEP)</h1>
+                    <p class="role" style="color: var(--accent); margin-bottom: 2rem;">Student Spaceflight Experiments Program</p>
+
+                    <h3>Overview</h3>
                     <p>
-                        I led a group that won a bid to send an experiment to the International Space Station. 
-                        We investigated growing composting red-worms in microgravity.
+                        I led a student team that won a competitive bid to send a microgravity experiment to the International Space Station (ISS). 
+                        Our research investigated the viability of composting red-worms in a zero-gravity environment to support future sustainable space travel.
                     </p>
+                    
+                    <h3>Key Achievements</h3>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem;">
+                        <li><strong>Proposal Writing:</strong> Authored the winning technical proposal selected from hundreds of entries.</li>
+                        <li><strong>Fundraising:</strong> Secured corporate sponsorship to fund the mission launch fees.</li>
+                        <li><strong>Presentation:</strong> Invited to present our findings at the Smithsonian National Air and Space Museum in Washington, D.C.</li>
+                    </ul>
                 </div>
-                <img src="images/Project Photos/SSEP/SSEP_Test_Tube.jpg" alt="Space Launch" class="project-hero-img">
+
+                <div class="module-media">
+                    <img src="images/Project Photos/SSEP/SSEP_Test_Tube.jpg" alt="Space Launch" class="project-hero-img">
+                    
+                    <div class="tech-sidebar">
+                        <h3>Skills</h3>
+                        <div class="tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Grant Writing</span>
+                            <span class="tag">Public Speaking</span>
+                            <span class="tag">Biology</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>
-                Our experiment launched on a SpaceX Falcon 9 in Feb 2017. I learned how to write professional proposals, 
-                raise funds from corporate sponsors, and present at the Smithsonian Air and Space Museum.
-            </p>
-        </div>
-        
+             </div>
+
         <div id="rack" class="project-module">
-             <div class="hero-split">
-                <div class="hero-text">
-                    <h2>Custom Smart Car Rack</h2>
+             <div class="module-flex-container">
+                <div class="module-text">
+                    <h1 style="margin-bottom: 0.5rem;">Custom Smart Car Rack</h1>
+                    <p class="role" style="color: var(--accent); margin-bottom: 2rem;">Metal Fabrication</p>
+
+                    <h3>Overview</h3>
                     <p>
-                        I used aluminum extruded square tubes to create a custom ski/snowboard rack that fastens to the car's towing hook ports.
+                         Designed and built a custom aluminum rack for a Smart Car to carry skis and bikes. The challenge was creating a secure mounting system 
+                         for a vehicle that does not support standard roof racks.
                     </p>
+                    
+                     <h3>Fabrication</h3>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem;">
+                        <li><strong>Design:</strong> CAD modeling to ensure clearance for the rear hatch and proper load distribution.</li>
+                        <li><strong>Build:</strong> Cut, bent, and bolted aluminum tubing to create a lightweight but rigid frame.</li>
+                    </ul>
                 </div>
-                <img src="images/Project Photos/BikeRack.png" alt="Ski Rack" class="project-hero-img">
+
+                <div class="module-media">
+                    <img src="images/Project Photos/BikeRack.png" alt="Smart Car Rack" class="project-hero-img">
+                    
+                    <div class="tech-sidebar">
+                        <h3>Skills</h3>
+                        <div class="tags">
+                            <span class="tag">Aluminum Fabrication</span>
+                            <span class="tag">CAD Design</span>
+                            <span class="tag">Mechanical Assembly</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
+    
     <footer><p>&copy; 2026 Kris Kirkwood.</p></footer>
+<script src="lightbox.js"></script>
 </body>
 </html>
